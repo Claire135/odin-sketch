@@ -37,9 +37,23 @@ input{
     flex-direction: column;
 }
 
-.sketch-container{
-    display:flex;
+.over-grid-container{
+    display: flex;
     justify-content: center;
     align-items: center;
+    margin: 70px;
+    flex-direction: column;
+    gap: 20px;
 }
 
+.grid-container{
+    display: flex;
+    width: 500px;
+    height: 500px;
+    box-sizing: border-box;
+    border: 2px solid black;
+    flex-wrap: wrap;
+}
+#grid{
+    border: 2px solid peru
+}
