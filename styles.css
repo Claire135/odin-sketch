@@ -50,10 +50,20 @@ input{
     display: flex;
     width: 500px;
     height: 500px;
-    box-sizing: border-box;
     border: 2px solid black;
-    flex-wrap: wrap;
+    flex: 0,0,auto;
+
 }
 #grid{
-    border: 2px solid peru
+    display: flex;
+    flex-wrap: wrap;
+    flex: 0,0 auto;
+    box-sizing: border-box;
+}
+
+.gridBox{
+    box-sizing: border-box;
+    display: flex;
+    flex: 0, 0, auto;
+    background-color: grey;
 }
