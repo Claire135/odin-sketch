@@ -1,5 +1,3 @@
-console.log("Hello World")
-
 function generateGrid(){
 
     function getInput(){
@@ -25,7 +23,7 @@ function generateGrid(){
     const userInput = getInput();
 
     function getSize(userInput){
-        let boxSize = (500/userInput)*10/10;
+        let boxSize = (750/userInput)*10/10;
         return boxSize;
     }
 
@@ -48,7 +46,6 @@ function generateGrid(){
             gridBox.style.height = `${size}px`;
             gridBox.style.width = `${size}px`;
             gridBox.style.background  =" #f8f8f8"
-            gridBox.style.border  ="2px solid purple"
             gridBox.style.margin = "0px"
             gridBox.style.padding = "0px"
             gridBox.style.boxSizing= "border-box"
@@ -56,6 +53,14 @@ function generateGrid(){
         }
     }
     makeGrid(size, noOfBoxes);
+
+    function monoColor(event){
+        event.target.style.backgroundColor = "tomato";
+    }
+
+    grid.addEventListener("mouseover", monoColor)
+
+    
 }
 
 generateGrid()
@@ -65,6 +70,3 @@ const genGridBtn = document.querySelector("#genGridBtn");
 genGridBtn.addEventListener("click", () => {
     generateGrid();
 });
-
-
-

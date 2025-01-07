@@ -9,29 +9,6 @@ header, footer{
     align-content: center;
 }
 
-.overall-user-controls{
-    display: flex;
-    justify-content: space-around;
-}
-
-.user-input-container{
-    display: flex;
-    gap: 10px;
-}
-
-.input-text-container{
-    display: flex;
-}
-
-.input-container{
-    display: flex;
-}
-
-input{
-    max-width: 70px;
-    padding: 2px;
-}
-
 .controls-container{
     display: flex;
     flex-direction: column;
@@ -48,22 +25,24 @@ input{
 
 .grid-container{
     display: flex;
-    width: 500px;
-    height: 500px;
+    width: 750px;
+    height: 750px;
     border: 2px solid black;
     flex: 0,0,auto;
-
+    margin: 0px;
+    padding: 0px;
 }
 #grid{
     display: flex;
     flex-wrap: wrap;
     flex: 0,0 auto;
     box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
 }
 
 .gridBox{
     box-sizing: border-box;
     display: flex;
     flex: 0, 0, auto;
-    background-color: grey;
 }
