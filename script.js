@@ -45,7 +45,7 @@ function generateGrid(){
             const gridBox = document.createElement('div');
             gridBox.style.height = `${size}px`;
             gridBox.style.width = `${size}px`;
-            gridBox.style.background  =" #f8f8f8"
+            gridBox.style.background  =" #FAF7F3";
             gridBox.style.margin = "0px"
             gridBox.style.padding = "0px"
             gridBox.style.boxSizing= "border-box"
@@ -54,11 +54,40 @@ function generateGrid(){
     }
     makeGrid(size, noOfBoxes);
 
-    function monoColor(event){
-        event.target.style.backgroundColor = "tomato";
-    }
+    const blueBtn = document.querySelector("#blueBtn");
+    blueBtn.addEventListener("click", () => {
+        grid.addEventListener("mouseover", event => {
+            event.target.style.backgroundColor = "#5B7E91";
+        });
+    });
 
-    grid.addEventListener("mouseover", monoColor)
+    const yellowBtn = document.querySelector("#yellowBtn");
+    yellowBtn.addEventListener("click", () => {
+        grid.addEventListener("mouseover", event => {
+            event.target.style.backgroundColor = "#D9A441";
+        });
+    });
+
+    const redBtn = document.querySelector("#redBtn");
+    redBtn.addEventListener("click", () => {
+        grid.addEventListener("mouseover", event => {
+            event.target.style.backgroundColor = "#B23A48";
+        });
+    });
+
+    const greenBtn = document.querySelector("#greenBtn");
+    greenBtn.addEventListener("click", () => {
+        grid.addEventListener("mouseover", event => {
+            event.target.style.backgroundColor = "#9CAF88";
+        });
+    });
+
+    const orangeBtn = document.querySelector("#orangeBtn");
+    orangeBtn.addEventListener("click", () => {
+        grid.addEventListener("mouseover", event => {
+            event.target.style.backgroundColor = "#D0845A";
+        });
+    });
 
     
 }
