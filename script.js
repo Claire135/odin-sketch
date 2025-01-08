@@ -54,6 +54,22 @@ function generateGrid(){
     }
     makeGrid(size, noOfBoxes);
 
+    function getRandomColor(){
+        const red = Math.floor(Math.random()* 255);
+        const green = Math.floor(Math.random()* 255);
+        const blue = Math.floor(Math.random()* 255);
+        return `rgb(${red}, ${green}, ${blue})`;
+    }
+
+    console.log(getRandomColor())
+
+    const multiBtn = document.querySelector("#multiBtn");
+    multiBtn.addEventListener("click", () => {
+        grid.addEventListener("mouseover", event => {
+            event.target.style.backgroundColor = getRandomColor();
+        });
+    });
+
     const blueBtn = document.querySelector("#blueBtn");
     blueBtn.addEventListener("click", () => {
         grid.addEventListener("mouseover", event => {
@@ -89,11 +105,16 @@ function generateGrid(){
         });
     });
 
-    
+    const clearSquareBtn = document.querySelector("#clearSquareBtn");
+    clearSquareBtn.addEventListener("click", () => {
+        const gridBoxes = grid.querySelectorAll('div'); // Get all the grid boxes
+        gridBoxes.forEach(box => {
+            box.style.backgroundColor = "#FAF7F3"; // Reset the background color of each box
+        });
+    });
 }
 
 generateGrid()
-
 
 const genGridBtn = document.querySelector("#genGridBtn");
 genGridBtn.addEventListener("click", () => {
