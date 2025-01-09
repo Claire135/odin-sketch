@@ -9,12 +9,19 @@ body{
 header{
     background-color: #5B7E91;
     font-size: 45px;
+    padding: 20px;
 }
 
 footer{
     background-color: #2B3A42;
-    text-decoration: none;
+    text-decoration: underline;
     font-size: 20px;
+    padding-top: 20px;
+    padding-bottom: 50px;
+}
+
+footer a{
+    color: #F3EDE7;
 }
 
 header, footer{
@@ -22,7 +29,6 @@ header, footer{
     justify-content: center;
     align-content: center;
     color: #F3EDE7;
-    padding: 20px;
 }
 
 .over-grid-container{
